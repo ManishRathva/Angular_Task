@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { child } from './childata';
 import { DataService } from './data.service';
 
 @Component({
@@ -8,16 +7,13 @@ import { DataService } from './data.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-
-  orignal:any='';
-  constructor(private ser:DataService) {
-    this.ser.cData.subscribe((val)=>{
-        this.orignal=val
-    })
+  orignal: any = '';
+  constructor(private ser: DataService) {
+    this.ser.cData.subscribe((val) => {
+      this.orignal = val;
+    });
   }
-submitData(fname:any ,lname:any){
-console.log(this.orignal,fname,lname);
-
-}
-
+  submitData(fname: any, lname: any) {
+    console.log(this.orignal, fname, lname);
+  }
 }

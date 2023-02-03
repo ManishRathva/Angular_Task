@@ -1,10 +1,11 @@
-<div>
-  <app-child></app-child>
-</div>
+
 <div>
   <form>
-    <input type="text" name="fname" #fname>
-    <input type="text" name="lname" #lname>
+    FirstName:<input type="text" name="fname" #fname><br>
+    LastName:<input type="text" name="lname" #lname>
   </form>
+  <div>
+    <app-child></app-child>
+  </div>
 </div>
 <button (click)="submitData(fname.value ,lname.value)">Submit</button>
