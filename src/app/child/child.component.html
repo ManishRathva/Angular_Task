@@ -1,0 +1,17 @@
+<!-- <div>
+  <form #childForm="ngForm" (keyup.enter)="addChilddata(childForm.value)" >
+  <label>Country:</label>
+  <input type="text" ngModel name="country"><br>
+  <label>State:</label>
+  <input type="text" ngModel name="state"><br>
+  <label>City:</label>
+  <input type="text" ngModel name="city">
+</form>
+</div>
+<br> -->
+<!-- country <input type="text" [ngModel]="countryinp" (ngModelChange)="onCountry($event)"> -->
+<!-- state <input type="text">
+city <input type="text"> -->
+
+<p>Child sharedVar: {{sharedVar}}</p>
+<input [ngModel]="sharedVar" (ngModelChange)="change($event)">
