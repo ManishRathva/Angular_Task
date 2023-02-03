@@ -1,22 +1,10 @@
-<!--
 <div>
-  <form #perentForm="ngForm" (ngSubmit)="addData(perentForm.value)">
-  <label>first Name:</label>
-   <input type="text" ngModel name="fname"><br>
-   <label>Last Name:</label>
-   <input type="text" ngModel name="lname"><br>
-   <button type="submit">Submit</button>
+  <app-child></app-child>
+</div>
+<div>
+  <form>
+    <input type="text" name="fname" #fname>
+    <input type="text" name="lname" #lname>
   </form>
 </div>
-<app-child (parentFunction)="parentFunction($event)">
-
-</app-child> -->
-<!--
-<form #formData="ngForm" (ngSubmit)="submiData(formData.value)">
-  fname<input type="text" ngModal name="fname">
- lname <input type="text" ngModal name="lname">
- <app-child [(countryinp)]="childCountry"></app-child>
- <button type="submit" (click)="submitD(childCountry)">submit</button>
-</form> -->
-<div>Parent sharedVarParent: {{sharedVarParent}}</div>
-        <app-child [(sharedVar)]="sharedVarParent"></app-child>
+<button (click)="submitData(fname.value ,lname.value)">Submit</button>
